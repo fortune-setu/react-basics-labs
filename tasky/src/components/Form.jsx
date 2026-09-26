@@ -54,7 +54,8 @@ const AddTaskForm = (props) => {
                     sx={{
                         m: 1,
                         p: 1,
-                        width: '95%'
+                        width: '95%',
+                        fontFamily: "Comic Sans MS"
                     }}
                 >
                     Add Task

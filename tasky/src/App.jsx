@@ -102,11 +102,13 @@ function App() {
         <Grid
           container
           spacing={5}
+          size={{ xs: 12, sm: 6, md: 4 }}
           sx={{
             justifyContent: "center"
           }}
         >
           {taskState.tasks.map((task, index) => (
+            // <Grid size={{ xs: 12, sm: 6, md: 4 }}>
             <Task
               title={task.title}
               description={task.description}
@@ -116,6 +118,7 @@ function App() {
               markDone={() => doneHandler(index)}
               deleteTask={() => deleteHandler(index)}
             />
+            // </Grid>
           ))}
         </Grid>
       </Container>

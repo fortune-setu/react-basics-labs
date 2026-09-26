@@ -6,6 +6,9 @@ import CardContent from '@mui/material/CardContent';
 import CardHeader from '@mui/material/CardHeader';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import DeleteIcon from '@mui/icons-material/Delete';
+import DoneIcon from '@mui/icons-material/Done';
+import Alert from '@mui/material/Alert';
 
 const Task = (props) => {
 
@@ -33,9 +36,9 @@ const Task = (props) => {
                 <CardHeader
                     title={props.title}
                     sx={{
-                        backgroundColor: 'white',
-                        borderRadius: '3px',
-                        padding: '20px',
+                        backgroundColor: 'yellow',
+                        borderRadius: '10px',
+                        padding: '10px',
                         textAlign: 'center'
                     }}
                 />
@@ -66,6 +69,7 @@ const Task = (props) => {
                         sx={{ fontStyle: 'italic' }}
                     >
                         {props.description}
+                        <Alert severity="info">This is an info Alert.</Alert>
                     </Typography>
                 </CardContent>
 
@@ -75,13 +79,12 @@ const Task = (props) => {
                         padding: '20px'
                     }}
                 >
-                    <Button
-                        variant="contained"
+                    <Button variant="contained"
                         size="small"
                         color="success"
                         onClick={props.markDone}
                     >
-                        Done
+                        <DoneIcon />  Done
                     </Button>
 
                     <Button
@@ -89,8 +92,7 @@ const Task = (props) => {
                         size="small"
                         color="error"
                         onClick={props.deleteTask}
-                    >
-                        Delete
+                    > <DeleteIcon /> Delete
                     </Button>
                 </CardActions>
             </Card>
